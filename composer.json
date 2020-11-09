@@ -9,7 +9,7 @@
     ],
     "require": {
         "spatie/laravel-permission": "^3.17",
-        "savageglobalmarketing/foundation": "^1.0"
+        "savageglobalmarketing/laravel-foundation": "^1.0"
     },
     "extra": {
         "laravel": {
