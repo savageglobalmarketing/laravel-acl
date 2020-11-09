@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Providers;
+namespace SavageGlobalMarketing\Acl\Providers;
 
-use Maxcelos\Foundation\Providers\AuthServiceProvider as ServiceProvider;
-use Maxcelos\Acl\Console\PermissionCommand;
+use SavageGlobalMarketing\Foundation\Providers\AuthServiceProvider as ServiceProvider;
+use SavageGlobalMarketing\Acl\Console\PermissionCommand;
 
 class AclServiceProvider extends ServiceProvider
 {

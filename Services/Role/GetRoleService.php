@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Services\Role;
+namespace SavageGlobalMarketing\Acl\Services\Role;
 
-use Maxcelos\Foundation\Services\GetService;
-use Maxcelos\Acl\Contracts\RoleContract;
+use SavageGlobalMarketing\Foundation\Services\GetService;
+use SavageGlobalMarketing\Acl\Contracts\RoleContract;
 
 class GetRoleService extends GetService
 {

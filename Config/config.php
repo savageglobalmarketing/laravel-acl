@@ -12,7 +12,7 @@ return [
      |
      */
     'admin' => [
-        'class' => \Maxcelos\Auth\Models\User::class,
+        'class' => \SavageGlobalMarketing\Auth\Models\User::class,
 
         'username_field' => 'email',
 

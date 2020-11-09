@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Services\Role;
+namespace SavageGlobalMarketing\Acl\Services\Role;
 
-use Maxcelos\Foundation\Services\QueryService;
-use Maxcelos\Acl\Contracts\RoleContract;
+use SavageGlobalMarketing\Foundation\Services\QueryService;
+use SavageGlobalMarketing\Acl\Contracts\RoleContract;
 
 class QueryRoleService extends QueryService
 {

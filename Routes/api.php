@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('permissions', 'RoleController@permissions')->name('maxcelos.permissions');
+Route::get('permissions', 'RoleController@permissions')->name('savageglobalmarketing.permissions');
 
-Route::apiResource('roles', 'RoleController', ['as' => 'maxcelos']);
+Route::apiResource('roles', 'RoleController', ['as' => 'savageglobalmarketing']);

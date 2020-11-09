@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Maxcelos\\Acl\\' => array($baseDir . '/'),
+    'SavageGlobalMarketing\\Acl\\' => array($baseDir . '/'),
 );

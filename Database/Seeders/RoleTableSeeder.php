@@ -1,12 +1,12 @@
 <?php
 
-namespace Maxcelos\Acl\Database\Seeders;
+namespace SavageGlobalMarketing\Acl\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
-use Maxcelos\Acl\Models\Role;
+use SavageGlobalMarketing\Acl\Models\Role;
 use Modules\Authentication\Models\Tenant;
 use Spatie\Permission\Models\Permission;
 

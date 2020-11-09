@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Services\Role;
+namespace SavageGlobalMarketing\Acl\Services\Role;
 
-use Maxcelos\Foundation\Services\DestroyService;
-use Maxcelos\Acl\Contracts\RoleContract;
+use SavageGlobalMarketing\Foundation\Services\DestroyService;
+use SavageGlobalMarketing\Acl\Contracts\RoleContract;
 
 class DestroyRoleService extends DestroyService
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Maxcelos\Acl\Repositories;
+namespace SavageGlobalMarketing\Acl\Repositories;
 
-use Maxcelos\Acl\Contracts\RoleContract;
-use Maxcelos\Acl\Models\Role;
-use Maxcelos\Foundation\Repositories\FoundationRepository;
+use SavageGlobalMarketing\Acl\Contracts\RoleContract;
+use SavageGlobalMarketing\Acl\Models\Role;
+use SavageGlobalMarketing\Foundation\Repositories\FoundationRepository;
 
 class RoleRepository extends FoundationRepository implements RoleContract
 {

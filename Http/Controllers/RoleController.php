@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Http\Controllers;
+namespace SavageGlobalMarketing\Acl\Http\Controllers;
 
-use Maxcelos\Acl\Models\Role;
-use Maxcelos\Foundation\Http\Controllers\FoundationController;
+use SavageGlobalMarketing\Acl\Models\Role;
+use SavageGlobalMarketing\Foundation\Http\Controllers\FoundationController;
 use Spatie\Permission\Models\Permission;
 
 class RoleController extends FoundationController

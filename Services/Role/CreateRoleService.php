@@ -1,11 +1,11 @@
 <?php
 
-namespace Maxcelos\Acl\Services\Role;
+namespace SavageGlobalMarketing\Acl\Services\Role;
 
 use Illuminate\Support\Facades\DB;
-use Maxcelos\Foundation\Contracts\FoundationContract;
-use Maxcelos\Foundation\Services\CreateService;
-use Maxcelos\Acl\Contracts\RoleContract;
+use SavageGlobalMarketing\Foundation\Contracts\FoundationContract;
+use SavageGlobalMarketing\Foundation\Services\CreateService;
+use SavageGlobalMarketing\Acl\Contracts\RoleContract;
 
 class CreateRoleService extends CreateService
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Maxcelos\Acl\Policies;
+namespace SavageGlobalMarketing\Acl\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use Maxcelos\Acl\Models\Role;
-use Maxcelos\Auth\Models\User;
+use SavageGlobalMarketing\Acl\Models\Role;
+use SavageGlobalMarketing\Auth\Models\User;
 
 class RolePolicy
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Console;
+namespace SavageGlobalMarketing\Acl\Console;
 
 use Illuminate\Console\Command;
-use Maxcelos\Acl\Models\Role;
+use SavageGlobalMarketing\Acl\Models\Role;
 use Spatie\Permission\Models\Permission;
 
 class PermissionCommand extends Command

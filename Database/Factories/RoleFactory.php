@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Database\Factories;
+namespace SavageGlobalMarketing\Acl\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Maxcelos\Acl\Models\Role;
+use SavageGlobalMarketing\Acl\Models\Role;
 use Spatie\Permission\Models\Permission;
 
 class RoleFactory extends Factory

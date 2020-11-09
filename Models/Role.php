@@ -1,11 +1,11 @@
 <?php
 
-namespace Maxcelos\Acl\Models;
+namespace SavageGlobalMarketing\Acl\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 //use Modules\Authentication\Traits\HasScope;
-use Maxcelos\Acl\Database\Factories\RoleFactory;
+use SavageGlobalMarketing\Acl\Database\Factories\RoleFactory;
 use Spatie\Permission\Exceptions\RoleAlreadyExists;
 use Spatie\Permission\Guard;
 use Spatie\Permission\Models\Role as SpatieRole;

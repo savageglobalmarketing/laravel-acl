@@ -1,9 +1,9 @@
 <?php
 
-namespace Maxcelos\Acl\Http\Requests;
+namespace SavageGlobalMarketing\Acl\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Maxcelos\Foundation\Traits\ValidPagination;
+use SavageGlobalMarketing\Foundation\Traits\ValidPagination;
 
 class RoleRequest extends FormRequest
 {

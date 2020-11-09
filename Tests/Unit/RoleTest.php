@@ -1,11 +1,11 @@
 <?php
 
-namespace Maxcelos\Acl\Tests\Unit;
+namespace SavageGlobalMarketing\Acl\Tests\Unit;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Maxcelos\Acl\Models\Role;
-use Maxcelos\Acl\Services\Role\CreateRoleService;
-use Maxcelos\Auth\Models\User;
+use SavageGlobalMarketing\Acl\Models\Role;
+use SavageGlobalMarketing\Acl\Services\Role\CreateRoleService;
+use SavageGlobalMarketing\Auth\Models\User;
 use Tests\TestCase;
 
 class RoleTest extends TestCase
@@ -36,13 +36,13 @@ class RoleTest extends TestCase
     {
         $data = Role::factory()->make()->toArray();
 
-        $this->actingAs($this->authUser, 'api')->json('post', route('maxcelos.roles.store'), $data)
+        $this->actingAs($this->authUser, 'api')->json('post', route('savageglobalmarketing.roles.store'), $data)
             ->assertStatus(201);
     }
 
     public function testListRoles()
     {
-        $this->actingAs($this->authUser, 'api')->json('get', route('maxcelos.roles.index'))
+        $this->actingAs($this->authUser, 'api')->json('get', route('savageglobalmarketing.roles.index'))
             ->assertStatus(200);
     }
 
@@ -52,7 +52,7 @@ class RoleTest extends TestCase
 
         $role = app(CreateRoleService::class)->run($data)->toModel();
 
-        $this->actingAs($this->authUser, 'api')->json('get', route('maxcelos.roles.show', ['role' => $role->id]))
+        $this->actingAs($this->authUser, 'api')->json('get', route('savageglobalmarketing.roles.show', ['role' => $role->id]))
             ->assertStatus(200);
     }
 
@@ -65,7 +65,7 @@ class RoleTest extends TestCase
         //$roleUpdated = app(CreateRoleService::class)->run($data[1])->toArray();
         $data[1]['id'] = $role->id;
 
-        $response = $this->actingAs($this->authUser, 'api')->json('put', route('maxcelos.roles.update', ['role' => $role->id]), $data[1]);
+        $response = $this->actingAs($this->authUser, 'api')->json('put', route('savageglobalmarketing.roles.update', ['role' => $role->id]), $data[1]);
 
         $response->assertStatus(200);
     }
@@ -76,7 +76,7 @@ class RoleTest extends TestCase
 
         $role = app(CreateRoleService::class)->run($data)->toModel();
 
-        $this->actingAs($this->authUser, 'api')->json('delete', route('maxcelos.roles.destroy', ['role' => $role->id]))
+        $this->actingAs($this->authUser, 'api')->json('delete', route('savageglobalmarketing.roles.destroy', ['role' => $role->id]))
             ->assertStatus(204);
     }
 
@@ -86,7 +86,7 @@ class RoleTest extends TestCase
 
         $data =  Role::factory()->make()->toArray();
 
-        $this->actingAs($this->authUser, 'api')->json('post', route('maxcelos.roles.store'), $data)
+        $this->actingAs($this->authUser, 'api')->json('post', route('savageglobalmarketing.roles.store'), $data)
             ->assertStatus(403);
     }
 
@@ -94,7 +94,7 @@ class RoleTest extends TestCase
     {
         $this->authUser->revokePermissionTo('role_read');
 
-        $this->actingAs($this->authUser, 'api')->json('get', route('maxcelos.roles.index'))
+        $this->actingAs($this->authUser, 'api')->json('get', route('savageglobalmarketing.roles.index'))
             ->assertStatus(403);
     }
 
@@ -106,6 +106,6 @@ class RoleTest extends TestCase
 
         $role = app(CreateRoleService::class)->run($data[0])->toModel();
 
-        $this->actingAs($this->authUser, 'api')->json('delete', route('maxcelos.roles.destroy', ['role' => $role->id]))->assertStatus(403);
+        $this->actingAs($this->authUser, 'api')->json('delete', route('savageglobalmarketing.roles.destroy', ['role' => $role->id]))->assertStatus(403);
     }
 }

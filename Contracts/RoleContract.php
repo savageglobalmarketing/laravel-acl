@@ -1,8 +1,8 @@
 <?php
 
-namespace Maxcelos\Acl\Contracts;
+namespace SavageGlobalMarketing\Acl\Contracts;
 
-use Maxcelos\Foundation\Contracts\FoundationContract;
+use SavageGlobalMarketing\Foundation\Contracts\FoundationContract;
 
 interface RoleContract extends FoundationContract
 {}
