@@ -1,0 +1,28 @@
+{
+    "name": "maxcelos/laravel-acl",
+    "description": "",
+    "authors": [
+        {
+            "name": "Marcelo Barros da Silva",
+            "email": "maxcelos@outlook.com"
+        }
+    ],
+    "require": {
+        "spatie/laravel-permission": "^3.17"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Maxcelos\\Acl\\Providers\\AclServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Maxcelos\\Acl\\": ""
+        }
+    }
+}
