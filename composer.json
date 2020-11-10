@@ -9,7 +9,7 @@
     ],
     "require": {
         "spatie/laravel-permission": "^3.17",
-        "savageglobalmarketing/laravel-foundation": "dev-main"
+        "savageglobalmarketing/laravel-foundation": "^1.2"
     },
     "extra": {
         "laravel": {
