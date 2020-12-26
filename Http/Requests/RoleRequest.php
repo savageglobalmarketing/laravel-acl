@@ -3,6 +3,8 @@
 namespace SavageGlobalMarketing\Acl\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use SavageGlobalMarketing\Acl\Models\Role;
+use SavageGlobalMarketing\Foundation\Rules\UniqueOnTenant;
 use SavageGlobalMarketing\Foundation\Traits\ValidPagination;
 
 class RoleRequest extends FormRequest
@@ -45,7 +47,8 @@ class RoleRequest extends FormRequest
             'name' => [
                 'required',
                 'max:255',
-                "unique:{$this->tableNames['roles']},name,{$this->internID},id,deleted_at,NULL"
+                //"unique:{$this->tableNames['roles']},name,{$this->internID},id,deleted_at,NULL",
+                new UniqueOnTenant(Role::class)
             ],
             'type' => [
                 'in:permissive,prohibitive'

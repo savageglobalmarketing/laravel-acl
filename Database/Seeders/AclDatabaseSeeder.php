@@ -16,6 +16,6 @@ class AclDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(RoleTableSeeder::class);
+        // $this->call(RoleTableSeeder::class);
     }
 }

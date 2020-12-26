@@ -3,6 +3,7 @@
 namespace SavageGlobalMarketing\Acl\Console;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 use SavageGlobalMarketing\Acl\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -137,7 +138,9 @@ class PermissionCommand extends Command
     {
         $this->warn('Updating admin permissions...');
 
-        $superUserClass = config('acl.admin.class');
+        $tableNames = config('permission.table_names');
+
+        /*$superUserClass = config('acl.admin.class');
 
         $superUser = $superUserClass::where(config('acl.admin.username_field'), config('acl.admin.username'))->first();
 
@@ -147,9 +150,10 @@ class PermissionCommand extends Command
             $this->info('Admin permissions updated');
         } else {
             $this->error(' No admin found ');
-        }
+        }*/
 
-        $superUserRoles = Role::whereIn('name', config('acl.admin_roles'))->get();
+
+        $superUserRoles = DB::table($tableNames['roles'])->select('name')->where('name', config('acl.admin_role'))->get();
 
         foreach ($superUserRoles as $superUserRole) {
             $superUserRole->givePermissionTo(Permission::all()->pluck('name')->toArray());

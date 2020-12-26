@@ -7,10 +7,6 @@
             "email": "savageglobalmarketing@outlook.com"
         }
     ],
-    "require": {
-        "spatie/laravel-permission": "^3.17",
-        "savageglobalmarketing/laravel-foundation": "^1.2"
-    },
     "extra": {
         "laravel": {
             "providers": [

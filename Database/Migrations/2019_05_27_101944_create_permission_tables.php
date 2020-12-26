@@ -29,6 +29,7 @@ class CreatePermissionTables extends Migration
             $table->string('guard_name');
             $table->string('type')->default('permissive'); // permissive or prohibitive
             $table->string('display_name')->nullable(); // Descriptive name
+            $table->foreignId('tenant_id')->nullable()->references('id')->on('auth_tenants');
 
             $table->timestamps();
             $table->softDeletes();

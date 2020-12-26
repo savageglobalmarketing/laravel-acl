@@ -11,15 +11,15 @@ return [
      | This user will be updated every time a the migration command is executed, to get all permissions
      |
      */
-    'admin' => [
+    /*'admin' => [
         'class' => \SavageGlobalMarketing\Auth\Models\User::class,
 
         'username_field' => 'email',
 
         'username' => 'admin@email.com',
-    ],
+    ],*/
 
-    'admin_roles' => ['admin'],
+    'admin_role' => 'admin',
 
     /* ---------------------------------------------------------------------------------------
      | Default actions

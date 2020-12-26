@@ -8,6 +8,9 @@ use Spatie\Permission\Models\Permission;
 
 class RoleController extends FoundationController
 {
+    protected array $fillable = [
+        'name', 'display_name', 'type', 'permissions'
+    ];
 
     function __construct(Role $role)
     {

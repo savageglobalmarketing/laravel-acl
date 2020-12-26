@@ -7,15 +7,11 @@ use SavageGlobalMarketing\Acl\Console\PermissionCommand;
 
 class AclServiceProvider extends ServiceProvider
 {
-    /**
-     * @var string $moduleName
-     */
     protected $moduleName = 'Acl';
 
-    /**
-     * @var string $moduleNameLower
-     */
-    protected $moduleNameLower = 'acl';
+    protected string $moduleNameLower = 'acl';
+
+    protected string $modulePath = __DIR__ . '/../';
 
     /**
      * Boot the application events.

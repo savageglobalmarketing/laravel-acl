@@ -4,8 +4,8 @@ namespace SavageGlobalMarketing\Acl\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
-//use Modules\Authentication\Traits\HasScope;
 use SavageGlobalMarketing\Acl\Database\Factories\RoleFactory;
+use SavageGlobalMarketing\Auth\Traits\HasScope;
 use Spatie\Permission\Exceptions\RoleAlreadyExists;
 use Spatie\Permission\Guard;
 use Spatie\Permission\Models\Role as SpatieRole;
@@ -21,15 +21,15 @@ class Role extends SpatieRole
 {
     use SoftDeletes;
     use HasFactory;
-    //use HasScope;
+    use HasScope;
 
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name', 'display_name', 'type', 'guard_name',
+        'name', 'display_name', 'type', 'guard_name', 'tenant_id'
     ];
 
-    protected $hidden = ['guard_name'];
+    protected $hidden = ['guard_name', 'tenant_id'];
 
     public static function create(array $attributes = [])
     {

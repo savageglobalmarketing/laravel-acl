@@ -12,6 +12,7 @@ class RolePolicy
 
     public function index(User $user)
     {
+        //dd($user->getAllPermissions()->toArray());
         return $user->can('role_read');
     }
 
