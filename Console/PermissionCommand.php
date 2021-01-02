@@ -138,22 +138,7 @@ class PermissionCommand extends Command
     {
         $this->warn('Updating admin permissions...');
 
-        $tableNames = config('permission.table_names');
-
-        /*$superUserClass = config('acl.admin.class');
-
-        $superUser = $superUserClass::where(config('acl.admin.username_field'), config('acl.admin.username'))->first();
-
-        if ($superUser) {
-            $superUser->givePermissionTo(Permission::all()->pluck('name')->toArray());
-
-            $this->info('Admin permissions updated');
-        } else {
-            $this->error(' No admin found ');
-        }*/
-
-
-        $superUserRoles = DB::table($tableNames['roles'])->select('name')->where('name', config('acl.admin_role'))->get();
+        $superUserRoles = Role::where('name', config('acl.admin_role'))->get();
 
         foreach ($superUserRoles as $superUserRole) {
             $superUserRole->givePermissionTo(Permission::all()->pluck('name')->toArray());
