@@ -13,6 +13,8 @@ class RoleRequest extends FormRequest
 
     protected array $tableNames;
 
+    protected array $fillable = ['display_name', 'name', 'permissions', 'type'];
+
     protected $internID;
 
     /**
