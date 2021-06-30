@@ -40,6 +40,21 @@ class PermissionCommand extends Command
         $this->migratePermissions();
 
         $this->updateSuperUserPermissions();
+
+        $this->rolesSeed();
+    }
+
+    private function rolesSeed()
+    {
+        $roles = config('acl.seed_roles');
+
+        foreach ($roles as $role => $permissions) {
+            $role = Role::where('name', $role)->first();
+
+            if ($role) {
+                $role->givePermissionTo($permissions);
+            }
+        }
     }
 
     /**

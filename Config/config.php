@@ -56,4 +56,18 @@ return [
         */
         'role',
     ],
+
+    /* ---------------------------------------------------------------------------------------
+     | List of roles and permissions to seed
+     | ---------------------------------------------------------------------------------------
+     | Place the default permissions to system default roles.
+     |
+     | It will be seeded running the command permissions:migrate
+     */
+    'seed_roles' => [
+//        'some_role' => [
+//            'some_permission_name',
+//            'some_permission_name_2',
+//        ]
+    ]
 ];
